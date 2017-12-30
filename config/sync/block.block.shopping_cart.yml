@@ -10,8 +10,8 @@ _core:
   default_config_hash: UQ9l8BkgFPcF7r-8VwsTIxC1bOMlI0iQLrJUS95c1E8
 id: shopping_cart
 theme: bartik
-region: header
-weight: null
+region: sidebar_first
+weight: 0
 provider: null
 plugin: commerce_cart
 settings:
@@ -19,6 +19,6 @@ settings:
   label: 'Shopping Cart'
   provider: commerce_cart
   label_display: '0'
-  dropdown: true
+  dropdown: false
   item_text: items
 visibility: {  }

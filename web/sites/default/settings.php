@@ -795,3 +795,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'commerce_base';
+$settings['trusted_host_patterns'] = array(
+  '^gridics\.loc$',
+  '^.+\.gridics\.loc$',
+);
