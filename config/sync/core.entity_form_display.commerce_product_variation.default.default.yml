@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
+    - field.field.commerce_product_variation.default.attribute_color
+    - field.field.commerce_product_variation.default.attribute_sex
     - field.field.commerce_product_variation.default.attribute_size
+    - field.field.commerce_product_variation.default.attribute_type
   module:
     - commerce_price
 _core:
@@ -14,9 +17,27 @@ targetEntityType: commerce_product_variation
 bundle: default
 mode: default
 content:
+  attribute_color:
+    type: options_select
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  attribute_sex:
+    type: options_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   attribute_size:
     type: options_select
     weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  attribute_type:
+    type: options_select
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content

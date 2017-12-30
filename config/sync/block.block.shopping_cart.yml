@@ -10,8 +10,8 @@ _core:
   default_config_hash: UQ9l8BkgFPcF7r-8VwsTIxC1bOMlI0iQLrJUS95c1E8
 id: shopping_cart
 theme: bartik
-region: sidebar_first
-weight: 0
+region: sidebar_second
+weight: -6
 provider: null
 plugin: commerce_cart
 settings:
