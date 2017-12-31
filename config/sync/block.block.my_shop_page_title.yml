@@ -1,0 +1,20 @@
+uuid: bc6f5d8b-29fb-4562-9407-b490a06df1b7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - my_shop
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: my_shop_page_title
+theme: my_shop
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

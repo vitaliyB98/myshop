@@ -1,0 +1,22 @@
+uuid: 17db757e-87b8-47b1-b81d-44b2386d905f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - my_shop
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: my_shop_help
+theme: my_shop
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

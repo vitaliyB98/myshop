@@ -1,0 +1,22 @@
+uuid: fda25d32-b100-484b-8d98-c2997818b5c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - my_shop
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: my_shop_content
+theme: my_shop
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
