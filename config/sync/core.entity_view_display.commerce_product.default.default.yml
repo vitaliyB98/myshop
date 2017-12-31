@@ -8,10 +8,35 @@ dependencies:
     - field.field.commerce_product.default.field_image
     - field.field.commerce_product.default.stores
     - field.field.commerce_product.default.variations
+    - image.style.medium
   module:
     - commerce_product
+    - ds
     - image
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_image
+        - body
+      right:
+        - variations
 _core:
   default_config_hash: gT03TFcuSod4d9uPQNs_gqK1F1QZ0Ray5CBYW0BNLnk
 id: commerce_product.default.default
@@ -21,30 +46,37 @@ mode: default
 content:
   body:
     type: text_default
-    weight: 0
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
+    region: left
   field_image:
-    weight: 2
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  variations:
-    type: commerce_add_to_cart
-    weight: 1
+    weight: 0
     label: hidden
     settings:
-      default_quantity: '1'
-      combine: true
-      show_quantity: false
-    third_party_settings: {  }
-    region: content
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+    region: left
+  variations:
+    type: commerce_product_attributes_overview
+    weight: 2
+    label: hidden
+    settings:
+      attributes:
+        - '0'
+        - '0'
+        - color
+        - size
+      view_mode: add_to_cart
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: right
 hidden:
   created: true
   stores: true
